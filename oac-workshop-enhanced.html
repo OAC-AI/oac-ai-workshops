@@ -1233,8 +1233,15 @@ body.dark-mode details.section-collapse[open] summary{background:rgba(74,222,128
   <div class="step-card" id="step-1-1">
     <div class="step-label author">Step 1.1</div>
     <h3>Download the Workshop Dataset</h3>
+    <div style="margin:12px 0 16px;padding:14px 20px;background:linear-gradient(135deg,rgba(5,114,206,.08),rgba(27,123,52,.08));border:1.5px solid rgba(5,114,206,.25);border-radius:10px;display:flex;align-items:center;gap:14px">
+      <span style="font-size:28px">📥</span>
+      <div>
+        <a href="SampleSales_Data.xlsx" download style="font-size:16px;font-weight:700;color:#0572CE;text-decoration:none;display:inline-flex;align-items:center;gap:6px">Download SampleSales_Data.xlsx <span style="font-size:12px;background:#0572CE;color:#fff;padding:2px 8px;border-radius:4px;font-weight:600">XLSX</span></a>
+        <p style="margin:4px 0 0;font-size:13px;color:var(--text-secondary)">18,090 sales transactions &bull; 27 columns &bull; Jan 2020 &ndash; Apr 2026</p>
+      </div>
+    </div>
     <ol>
-      <li>Click the download link provided by your workshop instructor to download <kbd>SampleSales_Dataset.xlsx</kbd> to your computer</li>
+      <li>Click the download button above to save <kbd>SampleSales_Data.xlsx</kbd> to your computer</li>
       <li>Verify the file downloaded successfully &mdash; it should be approximately 2&ndash;3 MB</li>
     </ol>
     <div class="tip-box"><strong>File name may vary:</strong> Your instructor may provide the file as <kbd>SampleSales_Data.xlsx</kbd> or <kbd>SampleSales_Dataset.xlsx</kbd>. Either name is fine — the column structure is identical.</div>
@@ -2176,7 +2183,7 @@ patterns. Highlight anomalies.
   </div>
   <h3 style="font-family:var(--font-heading);font-size:18px;margin-bottom:16px">Workshop Files</h3>
   <div class="links-grid">
-    <a href="https://github.com/ravi-bhuma/oac-ai-workshop/raw/main/SampleSales_Data.xlsx" target="_blank" class="link-card"><div class="link-type">Download</div><h4>SampleSales_Data.xlsx</h4><p>Workshop dataset &mdash; sales transactions from 2020 through April 15, 2026 with 18,000+ rows across 27 columns</p></a>
+    <a href="https://github.com/OAC-AI/oac-ai-workshops/raw/main/SampleSales_Data.xlsx" target="_blank" class="link-card"><div class="link-type">Download</div><h4>SampleSales_Data.xlsx</h4><p>Workshop dataset &mdash; sales transactions from 2020 through April 15, 2026 with 18,000+ rows across 27 columns</p></a>
     <a href="https://github.com/ravi-bhuma/oac-ai-workshop/raw/main/sales_policies_targets.txt" target="_blank" class="link-card"><div class="link-type">Download</div><h4>sales_policies_targets.txt</h4><p>RAG knowledge document &mdash; discount policies, quarterly targets, KPIs, and fiscal calendar for the AI Agent</p></a>
   </div>
   <h3 style="font-family:var(--font-heading);font-size:18px;margin:28px 0 16px">Official Oracle Documentation</h3>
@@ -2209,24 +2216,4 @@ patterns. Highlight anomalies.
     <a href="https://community.oracle.com/customerconnect/categories/oracle-analytics" target="_blank" class="link-card"><div class="link-type">Community</div><h4>Oracle Analytics Community Forum</h4><p>Ask questions, share solutions, and connect with Oracle Analytics users and experts worldwide</p></a>
     <a href="https://blogs.oracle.com/analytics/" target="_blank" class="link-card"><div class="link-type">Blog</div><h4>Oracle Analytics Blog</h4><p>Latest product updates, feature announcements, tips and best practices from the Oracle Analytics team</p></a>
     <a href="https://www.youtube.com/@OracleAnalytics" target="_blank" class="link-card"><div class="link-type">Video</div><h4>Oracle Analytics YouTube Channel</h4><p>Video tutorials, demos, and webinar recordings for hands-on learning</p></a>
-    <a href="https://docs.oracle.com/en/cloud/paas/analytics-cloud/whats-new.html" target="_blank" class="link-card"><div class="link-type">Updates</div><h4>What&rsquo;s New in Oracle Analytics Cloud</h4><p>Stay current with the latest features, enhancements, and release notes</p></a>
-  </div>
-</section>
-
-</div><!-- /main-content -->
-</div><!-- /page-wrapper -->
-
-
-<footer class="footer">
-  <strong>Oracle Analytics Cloud &mdash; AI Assistant and AI Agents Hands-on Workshop</strong><br>
-  <span style="margin-top:8px;display:inline-block">Oracle Analytics &middot; Ravi Bhuma - CEAL Team</span>
-</footer>
-
-
-<script>
-/* ── Progress bar ── */
-window.addEventListener("scroll",function(){
-  var h=document.documentElement;
-  var p=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
-  var bar=document.getElementById("progressBar");
-  if(bar) bar.styl
+    <a href="https://docs.oracle.com/en/cloud/paas/analytics-cloud/whats-new.html" target="_blank" cl
