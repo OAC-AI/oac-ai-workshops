@@ -1,0 +1,32 @@
+SALES DISCOUNT POLICY
+  - Discounts above 30% require VP approval
+  - Standard Class shipping default for orders under $500
+  - Volume discounts: 5% for >50 units, 10% for >200 units
+
+QUARTERLY TARGETS (2025)
+  - Q1: $2.0M
+  - Q2: $1.5M
+  - Q3: $600K
+  - Q4: $500K
+  - Full Year Target: $4.5M
+
+REGIONAL STRATEGY
+  - East: Focus on Technology products
+  - West: Expand Office Supplies distribution
+  - Central: Grow Consumer segment penetration
+  - South: Increase Furniture market share
+  
+  KEY PERFORMANCE INDICATORS
+- Primary KPI: Sales (also referred to as Revenue)
+- Profitability KPI: Profit Ratio % = Profit / Sales × 100
+- High-Value Customer Threshold: Sales > $35,000
+- Default Ranking: Top 10 (unless user specifies otherwise)
+
+QUARTERLY TARGETS (2026)
+  - Q1: $2.4M
+  - Q2: $1.8M
+  - Q3: $700K
+  - Q4: $600K
+  - Full Year Target: $5.3M
+
+FISCAL CALENDAR
