@@ -1113,10 +1113,14 @@ body.dark-mode details.section-collapse[open] summary{background:rgba(74,222,128
 
 <!-- ═══════════════ ADMIN PRE-CHECK ═══════════════ -->
 <section class="lab-section" id="lab8">
-  <div class="section-header">
-    <div class="section-number" style="background:#2D5F3E">🔧</div>
-    <h2>Admin Pre-Check<span class="time-badge">~10 min</span></h2>
-  </div>
+  <details class="section-collapse">
+    <summary>
+      <div class="section-header" style="margin:0;padding:0;border:none">
+        <div class="section-number" style="background:#2D5F3E">🔧</div>
+        <h2 style="margin:0">Admin Pre-Check<span class="time-badge">~10 min</span></h2>
+      </div>
+    </summary>
+    <div class="collapse-content">
   <span class="track-label admin-track">Admin Reference</span>
   <p class="section-intro">This section is for <strong>administrators</strong>. It covers the GenAI console settings (which come pre-configured) and the steps to create a consumer role with AI Assistant permissions. These steps are typically completed <strong>before</strong> the workshop begins.</p>
 
@@ -1211,6 +1215,8 @@ body.dark-mode details.section-collapse[open] summary{background:rgba(74,222,128
       </div>
     </div>
 
+    </div><!-- /.collapse-content -->
+  </details><!-- /Admin Pre-Check collapsible -->
 </section>
 
 <!-- ═══════════════ LAB 1 — DOWNLOAD & UPLOAD ═══════════════ -->
@@ -2116,10 +2122,10 @@ patterns. Highlight anomalies.
       <li>Click the <strong>Search bar</strong> at the top</li>
       <li>Type a single prompt and press Enter:</li>
     </ol>
-    <div class="prompt-block"><div class="user-q">Homepage Prompt 1 &mdash; Location Dashboard</div>Give me a comprehensive location-based performance dashboard from SampleSales_Dataset</div>
+    <div class="prompt-block"><div class="user-q">Homepage Prompt 1 &mdash; Location Dashboard</div>Give me a comprehensive location-based performance dashboard from SampleSales</div>
     <div class="explain-box"><strong>What happens:</strong> The Homepage AI Assistant generates a <strong>complete multi-visualization dashboard</strong> from this single prompt &mdash; maps, bar charts, tables, and KPI cards &mdash; all in one go.</div>
     <div class="prompt-block"><div class="user-q">Homepage Prompt 2 &mdash; Executive Dashboard</div>Build an executive profitability dashboard showing margins by category and region</div>
-    <div class="prompt-block"><div class="user-q">Homepage Prompt 3 &mdash; Trend Analysis</div>Show me sales trends over the last 3 years with quarterly breakdown and growth rates</div>
+
     <ol start="4">
       <li>Review the generated visualizations</li>
       <li>Click <kbd>Create Workbook</kbd> to save the dashboard as a new workbook</li>
