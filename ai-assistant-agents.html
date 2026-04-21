@@ -1626,39 +1626,70 @@ body.dark-mode details.section-collapse[open] summary{background:rgba(74,222,128
     <h2>Quick Start &mdash; Skip the Setup, Jump to Asking<span class="time-badge">~10 min</span></h2>
   </div>
   <span class="track-label" style="background:#FDECEA;color:#C74634">Shortcut Path &mdash; Optional</span>
-  <p class="section-intro">Short on time? You can skip Labs 1 &amp; 2 and start asking questions right away. Download the pre-built <strong>SampleSales.dva</strong> project from GitHub &mdash; it already contains the indexed dataset with synonyms configured and a starter AI Agent wired up. You only need to add one small policy document, save, and start asking.</p>
+  <p class="section-intro">Eager to start asking questions? Skip Labs 1 &amp; 2 and get to the fun part fast. Download the pre-built <strong>SampleSales.dva</strong> project from GitHub and import it into your own OAC instance &mdash; it ships with the dataset (already indexed), a ready-made workbook, and a starter Sales Agent. Add the small policy document to the Agent and you&rsquo;re ready to ask.</p>
 
-  <div class="lab-toc"><span class="lab-toc-label">In this quick start:</span><a href="#qs-download">QS.1 Download .dva</a><a href="#qs-policy">QS.2 Add Policy Doc</a><a href="#qs-ask">QS.3 Start Asking</a><a href="#qs-dataset">About the Sample Data</a><a href="#qs-questions">Starter Questions</a></div>
+  <div class="lab-toc"><span class="lab-toc-label">In this quick start:</span><a href="#qs-download">QS.1 Import the .dva</a><a href="#qs-policy">QS.2 Add Policy Doc</a><a href="#qs-ask">QS.3 Start Asking</a><a href="#qs-dataset">About the Sample Data</a><a href="#qs-questions">Starter Questions</a></div>
 
   <details class="section-collapse" open>
-    <summary>What's already done for you in the .dva</summary>
+    <summary>What you&rsquo;ll get once you import the .dva</summary>
     <div class="collapse-content">
+      <p style="margin:4px 0 10px;font-size:14px;color:var(--text-secondary)">After you import <code>SampleSales.dva</code> into your OAC instance (steps in QS.1 below), the following artefacts land in <strong>My Folders</strong>:</p>
       <ul style="margin:8px 0 0 20px">
-        <li><strong>SampleSales_Dataset</strong> pre-loaded into your workspace</li>
-        <li><strong>Indexing</strong> turned on for all relevant columns</li>
-        <li><strong>Synonyms</strong> pre-configured (e.g. Sales = Revenue)</li>
-        <li>A starter <strong>AI Agent</strong> already built and pointed at the dataset</li>
+        <li><strong>SampleSales_Dataset</strong> &mdash; the retail sales dataset, with synonyms such as <em>Sales&nbsp;=&nbsp;Revenue</em> pre-configured</li>
+        <li>A folder named <strong>SampleSales</strong> containing:
+          <ul style="margin:4px 0 0 20px">
+            <li>An existing <strong>Sample Sales</strong> workbook &mdash; open it and ask questions right from the <strong>Workbook AI Assistant</strong></li>
+            <li>A pre-built <strong>Sales Agent</strong> &mdash; open it, attach the policy text file (QS.2), save, and ask questions</li>
+          </ul>
+        </li>
       </ul>
-      <p style="margin-top:10px;font-size:14px;color:var(--text-muted)">The only manual step left is uploading a small business-policy text file so the Agent can answer questions about targets, KPIs, and regional strategy.</p>
+      <p style="margin-top:12px;font-size:14px;color:var(--text-muted)"><strong>What you still need to do after import:</strong> add the small <strong>business-policy text file</strong> to the Sales Agent so it can answer questions about targets, KPIs, and regional strategy. Indexing is already enabled on the dataset for both AI Assistant and Homepage &mdash; only re-run it if the prompt window doesn&rsquo;t return answers in your instance.</p>
     </div>
   </details>
 
   <!-- QS.1 DOWNLOAD .DVA -->
   <div class="step-card" id="qs-download">
     <div class="step-label" style="color:#C74634;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:12px">Quick Start · QS.1</div>
-    <h3>Download the SampleSales.dva and Import into OAC</h3>
+    <h3>Download the SampleSales.dva and Import it into Your OAC Instance</h3>
     <ol>
-      <li>Download the pre-built project:
+      <li><strong>Download</strong> the pre-built project from GitHub:
         <div style="margin:12px 0">
           <a href="SampleSales.dva" download="SampleSales.dva" style="display:inline-flex;align-items:center;gap:10px;background:#1B7B34;color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px;box-shadow:0 2px 8px rgba(27,123,52,.25)">&#11015;&#65039; Download SampleSales.dva</a>
-          <div style="font-size:12px;color:var(--text-muted);margin-top:6px">&sim;3.6&nbsp;MB &middot; Oracle Analytics portable project archive &mdash; datasets, workbooks, indexes, synonyms, and a starter AI Agent in one file</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:6px">&sim;3.6&nbsp;MB &middot; Oracle Analytics portable project archive &mdash; bundles the dataset, workbook, synonyms, and a starter AI Agent in one file</div>
         </div>
       </li>
-      <li>In Oracle Analytics, click the <strong>Navigator</strong> icon (the 9-dot grid in the top-left) and open <span class="nav-path">Catalog</span> &mdash; or just stay on the <strong>Home</strong> page.</li>
-      <li>Click <strong>Page Menu</strong> (top-right) &rarr; <strong>Import Workbook/Flow</strong>.</li>
-      <li>Select the downloaded <code>SampleSales.dva</code> file and click <strong>Import</strong>. OAC unpacks the dataset, indexes, synonyms, and the starter Agent in one step.</li>
+      <li><strong>Open your own OAC instance</strong> and sign in. You&rsquo;ll import the <code>.dva</code> here so you can run, edit, and ask questions against it.</li>
+      <li>From the <strong>Home</strong> page (or <span class="nav-path">Navigator &rarr; Catalog</span>), click the <strong>Page Menu</strong> &mdash; the <strong>three dots</strong> beside the <kbd>Create</kbd> button in the top-right &mdash; and choose <strong>Import Workbook/Flow&hellip;</strong>
+        <div style="margin:12px 0">
+          <img src="images/import_dva.png" alt="OAC Page Menu showing the three-dot menu beside the Create button with Import Workbook/Flow option" style="max-width:100%;border:1px solid var(--border);border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.08)">
+          <div style="font-size:12px;color:var(--text-muted);margin-top:6px;text-align:center"><em>Page Menu (3 dots, top-right) &rarr; Import Workbook/Flow&hellip;</em></div>
+        </div>
+      </li>
+      <li>In the <strong>Import Workbook/Flow</strong> dialog, click <strong>Change File</strong>, pick the <code>SampleSales.dva</code> you just downloaded, then click <strong>Import</strong>.</li>
+      <li>By default, OAC imports everything into <strong>My Folders</strong>. After a successful import you&rsquo;ll see:
+        <ul style="margin:6px 0 0 20px">
+          <li><strong>SampleSales_Dataset</strong> &mdash; the dataset</li>
+          <li>A folder called <strong>SampleSales</strong> containing the <strong>Sample Sales</strong> workbook and the <strong>Sales Agent</strong></li>
+        </ul>
+      </li>
+      <li><strong>Check Indexing</strong> on <code>SampleSales_Dataset</code>. The imported <code>.dva</code> already ships with indexing configured for <strong>Assistants and Homepage Search</strong>, so in most cases you can skip straight to asking questions. You can confirm this from <strong>Inspect &rarr; Search &rarr; Settings</strong> &mdash; the top-right of the panel shows <em>Last&nbsp;Run: Success</em> with a date.
+        <div class="tip-box" style="margin-top:10px"><strong>Only re-run indexing if&hellip;</strong> the AI prompt window doesn&rsquo;t return answers for this dataset in your own instance. To re-run it: right-click <strong>SampleSales_Dataset</strong> &rarr; <strong>Inspect</strong> &rarr; <strong>Search</strong> tab &rarr; on the <kbd>Settings</kbd> sub-tab make sure <strong>Index Dataset For</strong> is set to <kbd>Assistants and Homepage Search</kbd>, then click <kbd>Run Now</kbd> (or <kbd>Check Now</kbd> top-right) and wait for the run to complete. (Full walkthrough: <a href="#lab2">Lab&nbsp;2 &mdash; Indexing &amp; Synonyms</a>.)</div>
+        <div class="warn-box" style="margin-top:10px"><strong>Prompt window disabled or not accepting input?</strong> This is almost always a permissions issue in your OAC instance. Open the dataset&rsquo;s <strong>Inspect &rarr; Permissions (Access)</strong> panel and make sure your user (or the role you&rsquo;re signed in as) has the right access &mdash; typically <strong>Author</strong> or <strong>Consumer</strong> &mdash; then reload the workbook or Agent.</div>
+      </li>
+      <li>You now have <strong>two ways</strong> to start asking questions:
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0">
+          <div style="background:#EEF5FF;border:1px solid #BBD5F5;border-radius:10px;padding:14px 16px">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#1E4E8C;margin-bottom:6px">Path 1 &mdash; Workbook AI Assistant</p>
+            <p style="font-size:14px;color:var(--text-secondary);margin:0;line-height:1.6">Open the <strong>Sample Sales</strong> workbook inside the <code>SampleSales</code> folder and ask questions directly from the <strong>Workbook AI Assistant</strong>.</p>
+          </div>
+          <div style="background:#FFF8E1;border:1px solid #F0DCA0;border-radius:10px;padding:14px 16px">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#92400E;margin-bottom:6px">Path 2 &mdash; Sales Agent</p>
+            <p style="font-size:14px;color:var(--text-secondary);margin:0;line-height:1.6">Open the <strong>Sales Agent</strong>, upload the policy <code>.txt</code> file (see <a href="#qs-policy">QS.2</a>), <strong>Save</strong>, and start asking.</p>
+          </div>
+        </div>
+      </li>
     </ol>
-    <div class="tip-box"><strong>Tip:</strong> A <code>.dva</code> is Oracle Analytics' portable project archive &mdash; it bundles datasets, workbooks, data-flows and AI Agents into one file.</div>
+    <div class="tip-box"><strong>Tip:</strong> A <code>.dva</code> is Oracle Analytics&rsquo; portable project archive &mdash; it bundles datasets, workbooks, data-flows, and AI Agents into one file so they travel together between instances.</div>
   </div>
 
   <!-- QS.2 POLICY DOC -->
