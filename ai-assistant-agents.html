@@ -1039,7 +1039,7 @@ body.dark-mode details.section-collapse[open] summary{background:rgba(74,222,128
         <a href="#lab4">Overview</a>
         <a href="#step-7-1">7.1 Single-Prompt Dashboard</a>
         <a href="#step-7-2">7.2 Follow-Up Questions</a>
-        <a href="#step-7-3">7.3 Deep Dive into Workbook</a>
+        <a href="#step-7-3">7.3 Explore as Workbook</a>
       </div>
     </li>
     <li class="sidebar-track-label track-ai-agents"><span class="track-dot agent"></span>AI Agents</li>
@@ -2456,67 +2456,79 @@ patterns. Highlight anomalies.
   <span class="track-label consumer-track">All Users</span>
   <p class="section-intro">The <strong>Homepage AI Assistant</strong> is your fastest path from login to insight. The moment you sign in to Oracle Analytics, you can type a single prompt and get a <strong>complete, multi-visualization dashboard</strong> &mdash; no workbook setup needed. Think of it as the front door to AI-powered analytics: start broad on the Home page, then dive deep into workbooks and Agents when you need more.</p>
 
-  <div class="lab-toc"><span class="lab-toc-label">In this lab:</span><a href="#step-7-1">7.1 Single-Prompt Dashboard</a><a href="#step-7-2">7.2 Follow-Up Questions</a><a href="#step-7-3">7.3 Deep Dive into Workbook</a></div>
+  <div class="lab-toc"><span class="lab-toc-label">In this lab:</span><a href="#step-7-1">7.1 Single-Prompt Dashboard</a><a href="#step-7-2">7.2 Follow-Up Questions</a><a href="#step-7-3">7.3 Explore as Workbook</a></div>
 
   <details class="section-collapse" open>
     <summary>The Homepage AI Flow</summary>
     <div class="collapse-content">
       <div class="explain-box" style="border-left-color:#7C4DFF">
-        <strong>Login &rarr; Ask &rarr; Dashboard &rarr; Explore &rarr; Deep Dive</strong><br><br>
-        <strong>1. Login &amp; Ask:</strong> Sign in to OAC. In the Home page search bar, type a single intent &mdash; the AI builds a complete dashboard instantly.<br>
-        <strong>2. Follow-Up:</strong> Refine your view with conversational follow-up prompts. Add filters, change time periods, drill into segments.<br>
-        <strong>3. Save &amp; Navigate:</strong> Save the generated dashboard as a workbook. Open it in Visualize mode for full editing.<br>
+        <strong>Login &rarr; Ask (Shift+Enter) &rarr; Dashboard &rarr; Refine &rarr; Deep Dive</strong><br><br>
+        <strong>1. Login &amp; Ask:</strong> Sign in to OAC. In the Home page search bar, type a single data-related question and press <kbd>Shift</kbd>&nbsp;+&nbsp;<kbd>Enter</kbd> &mdash; the AI builds a dashboard with an insights summary, up to five visualizations, and related-content links.<br>
+        <strong>2. Follow-Up:</strong> Type a follow-up (e.g., &ldquo;Can you add the city?&rdquo;) and press <kbd>Enter</kbd> to update the existing dashboard. Toggle between questions using the <strong>breadcrumbs</strong> on the left.<br>
+        <strong>3. Explore or Modify:</strong> Click <strong>Data</strong> to swap the dataset, or <strong>Explore as Workbook</strong> to open the result as a new workbook you can edit.<br>
         <strong>4. Invoke AI Assistant:</strong> Inside the workbook, click the Sparkle icon to open the AI Assistant for deeper, dataset-specific Q&amp;A.<br>
         <strong>5. Use the Agent:</strong> If an AI Agent is attached to the workbook, the Agent&rsquo;s business rules, KPI definitions, and knowledge documents enhance every answer.
       </div>
     </div>
   </details>
 
+  <div class="explain-box" style="border-left-color:#7C4DFF"><strong>Prerequisites &mdash; what must be true before Homepage queries work:</strong>
+    <ul style="margin:6px 0 0 20px">
+      <li><strong>Index your datasets</strong> for <kbd>Assistants and Homepage Search</kbd>. A dataset won&rsquo;t surface in Home page results until it&rsquo;s indexed &mdash; see <a href="#lab2">Lab&nbsp;2 &mdash; Indexing &amp; Synonyms</a>.</li>
+      <li><strong>Certify datasets</strong> you want to rank high in search results. Certified datasets are the ones the Homepage AI prefers when multiple options could answer a question.</li>
+      <li><strong>Assign synonyms</strong> on dataset columns using terms familiar to your users &mdash; this is what makes natural-language prompts reliable.</li>
+    </ul>
+  </div>
+
   <div class="step-card" id="step-7-1">
     <div class="step-label exercise">Step 7.1</div>
     <h3>Build a Complete Dashboard from a Single Prompt</h3>
     <ol>
-      <li>Navigate to the <strong>OAC Home page</strong></li>
-      <li>Click the <strong>Search bar</strong> at the top</li>
-      <li>Type a single prompt and press Enter:</li>
+      <li>Navigate to the <strong>OAC Home page</strong>.</li>
+      <li>Click the <strong>Search bar</strong> at the top.</li>
+      <li>Type a single data-related question and press <kbd>Shift</kbd>&nbsp;+&nbsp;<kbd>Enter</kbd> to have the Homepage AI Assistant build a visualization or dashboard:</li>
     </ol>
     <div class="prompt-block"><div class="user-q">Homepage Prompt 1 &mdash; Location Dashboard</div>Give me a comprehensive location-based performance dashboard from SampleSales</div>
-    <div class="explain-box"><strong>What happens:</strong> The Homepage AI Assistant generates a <strong>complete multi-visualization dashboard</strong> from this single prompt &mdash; maps, bar charts, tables, and KPI cards &mdash; all in one go.</div>
     <div class="prompt-block"><div class="user-q">Homepage Prompt 2 &mdash; Executive Dashboard</div>Build an executive profitability dashboard showing margins by category and region</div>
-
-    <ol start="4">
-      <li>Review the generated visualizations</li>
-      <li>Click <kbd>Create Workbook</kbd> to save the dashboard as a new workbook</li>
-    </ol>
-    <div class="tip-box"><strong>One prompt, full dashboard:</strong> Unlike the Workbook AI Assistant (which answers one question at a time), the Homepage AI generates an entire multi-chart dashboard from a single intent. This makes it ideal for rapid exploration and executive briefings.</div>
+    <div class="explain-box"><strong>What the AI returns:</strong> The resulting dashboard displays an <strong>LLM-created insights summary</strong> section, <strong>up to five visualizations</strong>, and <strong>links to related content</strong> &mdash; all from one prompt.</div>
+    <div class="tip-box"><strong>Enter vs. Shift+Enter:</strong> <kbd>Shift</kbd>&nbsp;+&nbsp;<kbd>Enter</kbd> tells OAC to <em>build</em> a dashboard from your question. Plain <kbd>Enter</kbd> simply runs a catalog search. For Homepage AI, always use <kbd>Shift</kbd>&nbsp;+&nbsp;<kbd>Enter</kbd> on the first prompt.</div>
+    <div class="tip-box" style="border-left-color:#7C4DFF"><strong>Threads on the left:</strong> Every dashboard you generate is saved as a <strong>thread on the left side of the page</strong>, so you can toggle between results without losing any of them.</div>
   </div>
 
   <div class="step-card" id="step-7-2">
     <div class="step-label exercise">Step 7.2</div>
     <h3>Refine with Follow-Up Questions</h3>
-    <p>The Homepage AI maintains conversational context. After the initial dashboard is generated, ask follow-up questions to refine:</p>
-    <div class="prompt-block"><div class="user-q">Follow-Up 1 &mdash; Filter</div>Now filter this to show only the East region</div>
-    <div class="prompt-block"><div class="user-q">Follow-Up 2 &mdash; Time Period</div>Show me only Q1 and Q2 of 2025</div>
-    <div class="prompt-block"><div class="user-q">Follow-Up 3 &mdash; Add Detail</div>Add a breakdown by customer segment</div>
-    <div class="explain-box"><strong>Conversational refinement:</strong> Each follow-up adjusts the existing dashboard rather than creating a new one. This lets you iteratively shape the analysis without starting over.</div>
+    <p>The Homepage AI maintains conversational context. After the initial dashboard is generated, type a follow-up question in the same prompt bar and press <kbd>Enter</kbd> &mdash; the existing visualizations update in place.</p>
+    <div class="prompt-block"><div class="user-q">Follow-Up 1 &mdash; Add a Field</div>Can you add the city?</div>
+    <div class="prompt-block"><div class="user-q">Follow-Up 2 &mdash; Time Filter</div>Can you only show information for this fiscal year?</div>
+    <div class="prompt-block"><div class="user-q">Follow-Up 3 &mdash; Region Filter</div>Now filter this to show only the East region</div>
+    <div class="prompt-block"><div class="user-q">Follow-Up 4 &mdash; Add Breakdown</div>Add a breakdown by customer segment</div>
+    <div class="explain-box"><strong>Breadcrumbs on the left:</strong> On the left side of the page, click the <strong>breadcrumbs</strong> to toggle through previously asked questions in the thread &mdash; each one restores the dashboard state at that step.</div>
+    <div class="tip-box"><strong>Conversational refinement:</strong> Each follow-up adjusts the existing dashboard rather than creating a new one. To start fresh with a new dashboard, press <kbd>Shift</kbd>&nbsp;+&nbsp;<kbd>Enter</kbd> again &mdash; OAC will create a new thread for it.</div>
   </div>
 
   <div class="step-card" id="step-7-3">
     <div class="step-label exercise">Step 7.3</div>
-    <h3>Deep Dive &mdash; Navigate to the Workbook AI Assistant</h3>
-    <p>When you need more granular exploration, transition from the Home page into the workbook experience:</p>
+    <h3>Explore or Modify Your Results</h3>
+    <p>From the generated dashboard you have two main levers to reshape the output:</p>
+    <ul style="margin:6px 0 14px 20px">
+      <li>Click <strong>Data</strong> (next to the dataset or subject-area name) to point the same question at a <em>different</em> dataset or subject area.</li>
+      <li>Click <strong>Explore as Workbook</strong> to open the visualization in a new workbook &mdash; from there you can edit, rearrange, add charts, and continue in the Workbook AI Assistant.</li>
+    </ul>
+
+    <h4 style="margin:18px 0 6px;font-weight:600">Deep-dive in the Workbook AI Assistant</h4>
+    <p>Once the dashboard is open as a workbook:</p>
     <ol>
-      <li>From the generated dashboard, click <kbd>Create Workbook</kbd> to save it</li>
-      <li>The workbook opens in <strong>Visualize</strong> mode &mdash; you can now edit, rearrange, and add your own visualizations</li>
-      <li>Click the <strong>&#10024; Sparkle icon</strong> (top-right) to open the <strong>AI Assistant</strong> panel</li>
-      <li>Now ask dataset-specific questions just like in Lab 3:</li>
+      <li>The workbook opens in <strong>Visualize</strong> mode &mdash; you can now edit, rearrange, and add your own visualizations.</li>
+      <li>Click the <strong>&#10024; Sparkle icon</strong> (top-right) to open the <strong>AI Assistant</strong> panel.</li>
+      <li>Now ask dataset-specific questions just like in Lab&nbsp;3:</li>
     </ol>
     <div class="prompt-block"><div class="user-q">Deep Dive 1</div>Who are our high-value customers in the East region?</div>
     <div class="prompt-block"><div class="user-q">Deep Dive 2</div>What is the profit ratio trend for Technology products?</div>
-    <ol start="5">
-      <li>If an <strong>AI Agent</strong> has been attached to this workbook (Lab 4), the Agent&rsquo;s business rules and knowledge documents will automatically enhance every response</li>
+    <ol start="4">
+      <li>If an <strong>AI Agent</strong> has been attached to this workbook (Lab&nbsp;4), the Agent&rsquo;s business rules and knowledge documents will automatically enhance every response.</li>
     </ol>
-    <div class="explain-box"><strong>The complete AI journey:</strong> You started from the Home page with a broad intent, refined it with follow-ups, saved it as a workbook, and now you&rsquo;re doing deep exploration with the AI Assistant and Agent &mdash; all without writing a single formula or building a single chart manually.</div>
+    <div class="explain-box"><strong>The complete AI journey:</strong> You started from the Home page with a broad intent, refined it with follow-ups, opened it as a workbook, and now you&rsquo;re doing deep exploration with the AI Assistant and Agent &mdash; all without writing a single formula or building a single chart manually.</div>
   </div>
 
     <div class="key-takeaway"><strong>Key Takeaway</strong><p>The Homepage AI is your zero-to-dashboard express lane. Start with intent, refine with follow-ups, then dive deep in the workbook &mdash; a complete AI-powered analytics journey.</p></div>
@@ -2548,7 +2560,7 @@ patterns. Highlight anomalies.
   <h3 style="font-family:var(--font-heading);font-size:18px;margin-bottom:16px">Guide Files</h3>
   <div class="links-grid">
     <a href="https://github.com/OAC-AI/oac-ai-workshops/raw/main/SampleSales_Data.xlsx" target="_blank" class="link-card"><div class="link-type">Download</div><h4>SampleSales_Data.xlsx</h4><p>Sample dataset &mdash; sales transactions from 2020 through April 15, 2026 with 18,000+ rows across 27 columns</p></a>
-    <a href="https://github.com/ravi-bhuma/oac-ai-workshop/raw/main/sales_policies_targets.txt" target="_blank" class="link-card"><div class="link-type">Download</div><h4>sales_policies_targets.txt</h4><p>RAG knowledge document &mdash; discount policies, quarterly targets, KPIs, and fiscal calendar for the AI Agent</p></a>
+    <a href="https://github.com/OAC-AI/oac-ai-workshops/raw/main/sales_policies_targets.txt" target="_blank" class="link-card"><div class="link-type">Download</div><h4>sales_policies_targets.txt</h4><p>RAG knowledge document &mdash; discount policies, quarterly targets, KPIs, and fiscal calendar for the AI Agent</p></a>
   </div>
   <h3 style="font-family:var(--font-heading);font-size:18px;margin:28px 0 16px">Official Oracle Documentation</h3>
   <div class="links-grid">
